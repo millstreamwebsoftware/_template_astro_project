@@ -3,10 +3,10 @@ _schema: default
 title: Home
 content_blocks:
   - _bookshop_name: image
-    image: /images/baigup-work-day-img_1867.jpg
+    image: /images/millstream-paper-planes.png
     title:
     description:
-    height: 30
+    height: 50
     indent: false
     lightbox: true
   - _bookshop_name: layout/columns
