@@ -1,0 +1,3 @@
+[submodule "src/mws-astro"]
+	path = src/mws-astro
+	url = https://github.com/millstreamwebsoftware/mws-astro
