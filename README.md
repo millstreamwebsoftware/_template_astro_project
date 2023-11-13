@@ -28,11 +28,9 @@ Pages are stored in the 'pages' content collection inside `content/pages`.
 
 Components, layouts and default styles are stored in the `src/mws-astro` submodule. Changes within the submodule must be committed and pulled separately to the base repository and are shared between all sites.
 
-Any site-specific styles are defined in `styles/custom.scss`.
+Any site-specific styles, including font imports, are defined in `styles/custom.scss`.
 
 Any static assets, like images, can be placed in the `public/` directory.
-
-Fonts are defined and loaded from `public/styles/fonts.css`.
 
 ## 🧞 Commands
 
