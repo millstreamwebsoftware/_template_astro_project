@@ -47,6 +47,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 | `npm run bookshopbuild`   | Run astro build then the bookshop post-build     |
+| `ncu -u`                  | Update npm packages                              |
 
 ## 📖 Documentation
 
