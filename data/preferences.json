@@ -32,9 +32,6 @@
   },
   "header": {
     "logo_image": "/images/millstream-white.svg",
-    "height": 100,
-    "background_top_color": "rgba(0, 0, 0, 1)",
-    "background_bottom_color": "rgba(0, 0, 0, 1)",
     "pin_header": true,
     "navigation_menu_depth": 3,
     "show_logo": true,

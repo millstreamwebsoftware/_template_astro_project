@@ -8,7 +8,7 @@ content_blocks:
     description:
     height: 50
     indent: false
-    lightbox: true
+    lightbox: false
   - _bookshop_name: layout/columns
     content_blocks:
       - _bookshop_name: richtext
