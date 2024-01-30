@@ -47,7 +47,8 @@
     "show_top_button": false
   },
   "API": {
-    "google_maps": {"api_key": "AIzaSyBs8yBYBYtUCy9yd0CqO-C3o0RbAK9qW-w"}
+    "google_maps": {"api_key": "AIzaSyBs8yBYBYtUCy9yd0CqO-C3o0RbAK9qW-w"},
+    "google_calendar": {"api_key": "AIzaSyCvQRwk3SQkKAVs3RGWUdzL0XRIA9_mDrA"}
   },
   "_input": {
     "copyright": {
