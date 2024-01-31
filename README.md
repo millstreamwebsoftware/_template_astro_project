@@ -26,10 +26,10 @@ Use default settings for everything else:
          Yes
 ```
 
-Then initialise the submodule:
+Then add the submodule:
 
 ```sh
-git submodule update --init --recursive
+git submodule add https://github.com/millstreamwebsoftware/mws-astro src/mws-astro
 ```
 
 Create a new github repository:
