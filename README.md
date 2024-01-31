@@ -2,18 +2,61 @@
 
 ## 🛠️ Setup
 
-> ⚠️ Ensure the `--recurse-submodules` flag is set when cloning this repository.
-> If it wasn't, you can clone the git submodule in an extra step with
->
-> ```sh
-> git submodule init
-> git submodule update
-> ```
-
-Install node modules
+First create a new astro project with this template:
 
 ```sh
-npm i
+npm create astro@latest -- --template millstreamwebsoftware/_template_astro_project
+```
+
+When prompted, set the project directory. If you are running the command from a new empty project directory already, use `.`
+
+Use default settings for everything else:
+
+```sh
+    ts   Do you plan to write TypeScript?
+         Yes
+
+   use   How strict should TypeScript be?
+         Strict
+
+  deps   Install dependencies?
+         Yes
+
+   git   Initialize a new git repository?
+         Yes
+```
+
+Then initialise the submodule:
+
+```sh
+git submodule update --init --recursive
+```
+
+Create a new github repository:
+
+```sh
+gh repo create
+```
+
+```sh
+? What would you like to do? Push an existing local repository to GitHub
+? Path to local repository .
+? Repository name
+? Repository owner millstreamwebsoftware
+? Description
+? Visibility Private
+✓ Created repository on GitHub
+? Add a remote? Yes
+? What should the new remote be called? origin
+✓ Added remote
+```
+
+Stage & Commit waiting changes to Github
+
+```sh
+git add .
+git commit -m "Initial Commit"
+git push -u origin main
 ```
 
 Then run the development server:
