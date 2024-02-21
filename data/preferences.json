@@ -1,29 +1,28 @@
 {
   "general": {
     "site_name": "",
-    "canonical_url": "",
+    "canonical_url": "http://localhost:4321/",
     "browser_window_title_suffix": "",
     "default_site_description": null,
     "default_sharing_image": null,
-    "favicon": "/favicon.ico",
-    "apple-touch-icon": "/apple-touch-icon.png",
+    "favicon": "public/favicon.svg",
     "social": [
-        {
-          "name": "facebook",
-          "title": "Facebook",
-          "link": ""
-        },
-        {
-          "name": "twitter",
-          "title": "Twitter",
-          "link": ""
-        },
-        {
-          "name": "email",
-          "title": "Email",
-          "link": ""
-        }
-      ]
+      {
+        "name": "facebook",
+        "title": "Facebook",
+        "link": ""
+      },
+      {
+        "name": "twitter",
+        "title": "Twitter",
+        "link": ""
+      },
+      {
+        "name": "email",
+        "title": "Email",
+        "link": ""
+      }
+    ]
   },
   "page": {
     "canvas_background_color": "#000000",
@@ -38,7 +37,7 @@
     "show_navigation": true,
     "show_socials": true
   },
-  "footer":{
+  "footer": {
     "foreground_color": "#fafafa",
     "background_color": "#000",
     "copyright": "Copyright ©",
@@ -47,12 +46,12 @@
     "show_top_button": false
   },
   "API": {
-    "google_maps": {"api_key": "AIzaSyBs8yBYBYtUCy9yd0CqO-C3o0RbAK9qW-w"},
-    "google_calendar": {"api_key": "AIzaSyCvQRwk3SQkKAVs3RGWUdzL0XRIA9_mDrA"}
+    "google_maps": { "api_key": "AIzaSyBs8yBYBYtUCy9yd0CqO-C3o0RbAK9qW-w" },
+    "google_calendar": { "api_key": "AIzaSyCvQRwk3SQkKAVs3RGWUdzL0XRIA9_mDrA" }
   },
   "_input": {
     "copyright": {
-        "comment": "The current year will automatically be appended after the © symbol."
+      "comment": "The current year will automatically be appended after the © symbol."
     },
     "default_site_description": {
       "comment": "The Site Description is the default description text shown when sharing this site with third-party services that support the 'Open Graph' protocol such as Facebook."
