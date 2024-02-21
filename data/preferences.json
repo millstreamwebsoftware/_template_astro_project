@@ -4,7 +4,7 @@
     "canonical_url": "http://localhost:4321/",
     "browser_window_title_suffix": "",
     "default_site_description": null,
-    "default_sharing_image": null,
+    "default_sharing_image": "/images/millstream-paper-planes.png",
     "favicon": "public/favicon.svg",
     "social": [
       {
