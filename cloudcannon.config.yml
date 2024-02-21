@@ -160,3 +160,9 @@ _snippets:
             - space-evenly
       show-text:
         type: checkbox
+  counter:
+    template: mdx_paired_component
+    inline: true
+    definitions:
+      component_name: Counter
+      content_key: content
