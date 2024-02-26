@@ -6,9 +6,11 @@
 # CloudCannon configuration specific to those collections.
 collections_config:
   data:
+    name: Preferences
     path: data
     disable_add: true
     disable_add_folder: true
+    disable_file_actions: true
   pages:
     path: src/content/pages
     url: "/[slug]/"
