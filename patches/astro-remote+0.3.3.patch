@@ -1,0 +1,11 @@
+diff --git a/node_modules/astro-remote/lib/utils.ts b/node_modules/astro-remote/lib/utils.ts
+index 20ff43f..c3feaa4 100644
+--- a/node_modules/astro-remote/lib/utils.ts
++++ b/node_modules/astro-remote/lib/utils.ts
+@@ -1,5 +1,5 @@
+ /**@ts-expect-error */
+-import { renderJSX } from "astro/runtime/server/jsx";
++import { renderJSX } from "astro/runtime/server/jsx.js";
+ import { jsx as h } from "astro/jsx-runtime";
+ import { transform, __unsafeHTML } from "ultrahtml";
+ import sanitize from "ultrahtml/transformers/sanitize";
