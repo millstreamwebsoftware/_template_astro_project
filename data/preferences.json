@@ -31,22 +31,31 @@
   },
   "header": {
     "logo_image": "/images/millstream-white.svg",
-    "pin_header": true,
+    "pin_header": "contain",
     "navigation_menu_depth": 3,
     "show_logo": true,
     "show_navigation": true,
-    "show_socials": true
+    "show_socials": true,
+    "show_home": true,
+    "show_caret": false,
+    "center_dropdowns": false
   },
   "footer": {
     "foreground_color": "#fafafa",
     "background_color": "#000",
     "copyright": "Copyright ©",
+    "show_sitemap": false,
     "show_copyright": true,
     "show_socials": true,
-    "show_top_button": false
+    "show_top_button": false,
+    "privacy_policy": null,
+    "text_content": null
   },
   "API": {
-    "google_maps": { "api_key": "AIzaSyBs8yBYBYtUCy9yd0CqO-C3o0RbAK9qW-w" },
+    "google_maps": {
+      "api_key": "AIzaSyBs8yBYBYtUCy9yd0CqO-C3o0RbAK9qW-w",
+      "dev_key": "AIzaSyA06gCQO11iwGhytFU_Lbb9OiCBMs1BC70"
+    },
     "google_calendar": { "api_key": "AIzaSyCvQRwk3SQkKAVs3RGWUdzL0XRIA9_mDrA" }
   },
   "_input": {
@@ -91,6 +100,12 @@
         "min": 0,
         "step": 1,
         "max": 3
+      }
+    },
+    "pin_header": {
+      "type": "select",
+      "options": {
+        "values": ["false", "pinned", "contain"]
       }
     }
   }
