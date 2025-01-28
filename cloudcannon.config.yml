@@ -4,6 +4,12 @@
 # Collections are related sets of content files, typically grouped by folder.
 # Here you can define your collections, as well as any
 # CloudCannon configuration specific to those collections.
+source: /
+
+paths:
+  static: public
+  uploads: public/[collection]/[relative_path]
+
 collections_config:
   data:
     name: Preferences
@@ -13,8 +19,7 @@ collections_config:
     disable_file_actions: true
   pages:
     path: src/content/pages
-    url: "/[slug]/"
-    output: true
+    url: "/[full_slug]/"
     icon: wysiwyg
     sort:
       key: order
@@ -32,52 +37,47 @@ collections_config:
       default:
         name: New Page
         path: schemas/page.md
-        new_preview_url: "/"
+        # new_preview_url: "/"
         hide_extra_inputs: true
         remove_extra_inputs: false
-    _inputs:
-      content_blocks:
-        empty_type: array
-      status:
-        type: select
-        options:
-          values:
-            - online
-            - hidden
-            - offline
-      order:
-        type: number
-        options:
-          step: 1
-    filter:
-      base: strict
+    preview:
+      metadata:
+        - text:
+            - template: "{status}"
+          icon: "circle"
 
-# _structures:
-# features:
-#   values:
-#     - value:
-#         item:
-#         isActive:
+    # _inputs:
+    #   content_blocks:
+    #     empty_type: array
+    #   status:
+    #     type: select
+    #     options:
+    #       values:
+    #         - online
+    #         - hidden
+    #         - offline
+    #   order:
+    #     type: number
+    #     options:
+    #       step: 1
 
-# source: src
-
-# data_config:
-#   preferences: data/preferences.json
-
-paths:
-  static: public
-  uploads: public/[collection]/[relative_path]
+collection_groups:
+  - heading: Pages
+    collections:
+      - pages
+  - heading: Preferences
+    collections:
+      - data
 
 # Timezone of your site in IANA format. This is used by date and datetime inputs
 # within the CloudCannon Data Editor.
 timezone: Australia/Perth
 
-generator:
-  metadata:
-    markdown: markdown-it
-    markdown-it:
-      html: true
-      linkify: true
+markdown:
+  engine: commonmark
+  options:
+    linkify: true
+    html: true
 
 _inputs:
   content:

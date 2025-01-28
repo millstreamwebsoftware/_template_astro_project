@@ -4,24 +4,12 @@
     "baseUrl": ".",
     "outDir": "dist",
     "paths": {
-      "@data/*": [
-        "data/*"
-      ],
-      "@components/*": [
-        "src/mws-astro/src/components/*"
-      ],
-      "@shared/*": [
-        "src/mws-astro/src/shared/astro/*"
-      ],
-      "@layouts/*": [
-        "src/mws-astro/src/layouts/*"
-      ],
-      "@styles/*": [
-        "src/mws-astro/src/styles/*"
-      ],
-      "@custom/*": [
-        "src/styles/*"
-      ],
+      "@data/*": ["data/*"],
+      "@components/*": ["src/mws-astro/src/components/*"],
+      "@shared/*": ["src/mws-astro/src/shared/astro/*"],
+      "@layouts/*": ["src/mws-astro/src/layouts/*"],
+      "@styles/*": ["src/mws-astro/src/styles/*"],
+      "@custom/*": ["src/styles/*"],
       "@mws-astro/*": ["src/mws-astro/src/*"]
     },
     "jsx": "react-jsx",

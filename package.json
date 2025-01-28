@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "2024.cbcfremantle.wa.edu.au",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -13,54 +13,48 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@astrojs/check": "^0.8.2",
-    "@bookshop/astro-bookshop": "3.10.0",
-    "@bookshop/astro-engine": "3.10.0",
-    "@bookshop/browser": "3.10.0",
-    "@bookshop/generate": "3.10.0",
-    "@cloudcannon/reader": "^1.1.4",
-    "@floating-ui/dom": "^1.6.8",
+    "@astrojs/check": "^0.9.4",
+    "@bookshop/astro-bookshop": "3.13.0",
+    "@bookshop/astro-engine": "3.13.0",
+    "@bookshop/browser": "3.13.0",
+    "@bookshop/generate": "3.13.0",
+    "@cloudcannon/reader": "^1.1.6",
+    "@floating-ui/dom": "^1.6.13",
     "@fullcalendar/core": "^6.1.15",
     "@fullcalendar/daygrid": "^6.1.15",
     "@fullcalendar/google-calendar": "^6.1.15",
     "@fullcalendar/list": "^6.1.15",
-    "@glidejs/glide": "^3.6.2",
-    "@googlemaps/js-api-loader": "^1.16.6",
-    "@hyzyla/pdfium": "^1.0.3",
-    "@iconify-json/carbon": "^1.1.36",
-    "@iconify-json/fa6-brands": "^1.1.21",
-    "@iconify-json/fa6-solid": "^1.1.23",
-    "@iconify-json/svg-spinners": "^1.1.2",
-    "@iconify/utils": "^2.1.25",
-    "@imgix/js-core": "^3.8.0",
-    "astro": "^4.12.2",
-    "astro-favicons": "^2.0.2",
+    "@glidejs/glide": "^3.7.1",
+    "@iconify-json/carbon": "^1.2.5",
+    "@iconify-json/fa6-brands": "^1.2.5",
+    "@iconify-json/fa6-solid": "^1.2.3",
+    "@iconify-json/svg-spinners": "^1.2.2",
+    "@iconify/utils": "^2.2.1",
+    "astro": "^5.1.10",
+    "astro-favicons": "^3.1.5",
     "astro-remote": "^0.3.3",
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.20",
     "color-string": "^1.9.1",
-    "cssnano": "^7.0.4",
+    "cssnano": "^7.0.6",
     "git-rev-sync": "^3.0.2",
     "he": "^1.2.0",
-    "ics": "^3.7.6",
+    "ics": "^3.8.1",
     "markdown-it": "^14.1.0",
     "patch-package": "^8.0.0",
+    "pdfjs-dist": "^4.10.38",
     "punycode": "^2.3.1",
     "sanitize.css": "^13.0.0",
-    "sass": "^1.77.8",
-    "typescript": "^5.5.4"
+    "sass": "1.83.4",
+    "sharp": "^0.33.5",
+    "typescript": "^5.7.3"
   },
   "devDependencies": {
     "@types/color-string": "^1.5.5",
     "@types/git-rev-sync": "^2.0.2",
     "@types/glidejs__glide": "^3.6.5",
-    "@types/google.maps": "^3.55.11",
+    "@types/google.maps": "^3.58.1",
     "@types/he": "^1.2.3",
-    "@types/markdown-it": "^14.1.1",
-    "@types/node": "^20.14.11"
-  },
-  "overrides": {
-    "astro-remote": {
-      "ultrahtml": "1.5.2"
-    }
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^22.12.0"
   }
 }
