@@ -37,29 +37,50 @@ collections_config:
       default:
         name: New Page
         path: schemas/page.md
-        # new_preview_url: "/"
+        new_preview_url: "/cc-newpage"
         hide_extra_inputs: true
         remove_extra_inputs: false
     preview:
       metadata:
         - text:
-            - template: "{status}"
+            - key: status
           icon: "circle"
-
-    # _inputs:
-    #   content_blocks:
-    #     empty_type: array
-    #   status:
-    #     type: select
-    #     options:
-    #       values:
-    #         - online
-    #         - hidden
-    #         - offline
-    #   order:
-    #     type: number
-    #     options:
-    #       step: 1
+    _inputs:
+      title:
+        type: text
+      description:
+        type: text
+      status:
+        type: select
+        options:
+          values:
+            - online
+            - hidden
+            - meta
+            - offline
+      thumbnail:
+        type: image
+      order:
+        type: number
+        options:
+          step: 1
+      content_blocks:
+        type: array
+      categories:
+        type: multiselect
+        options:
+          allow_create: true
+          allow_empty: true
+          empty_type: array
+      publishDate:
+        type: datetime
+        instance_value: NOW
+      expiryDate:
+        type: datetime
+      show_global_header:
+        type: checkbox
+      show_global_footer:
+        type: checkbox
 
 collection_groups:
   - heading: Pages
@@ -78,6 +99,7 @@ markdown:
   options:
     linkify: true
     html: true
+    xhtml: true
 
 _inputs:
   content:
@@ -112,6 +134,38 @@ _inputs:
       right: align-right
       justify: align-justify
       image_size_attributes: true
+  htmlcontent:
+    type: html
+    options:
+      link: true
+      blockquote: true
+      bold: true
+      format: p h1 h2 h3 h4 h5 h6 pre address div
+      italic: true
+      strike: true
+      subscript: true
+      superscript: true
+      underline: true
+      bulletedlist: true
+      indent: true
+      numberedlist: true
+      outdent: true
+      code: true
+      embed: true
+      snippet: true
+      horizontalrule: true
+      image: false
+      table: true
+      undo: true
+      redo: true
+      removeformat: true
+      copyformatting: true
+      styles: src/styles/editor.css
+      left: align-left
+      center: align-center
+      right: align-right
+      justify: align-justify
+      image_size_attributes: true
   classes:
     label: Style
     type: multiselect
@@ -123,6 +177,37 @@ _inputs:
         - no-indent-bottom
         - no-indent-left
         - no-indent-right
+  section:
+    type: object
+    options:
+      subtype: mutable
+
+_structures:
+  section:
+    values:
+      - label: Section
+        default: true
+        value:
+          height:
+          color:
+          content:
+          background_color:
+          background_image:
+          background_video:
+          background_align:
+          background_opacity:
+          background_fixed:
+          classes:
+        place_groups_below: true
+        groups:
+          - heading: Background
+            inputs:
+              - background_color
+              - background_image
+              - background_video
+              - background_align
+              - background_opacity
+              - background_fixed
 
 _snippets_imports:
   mdx: true
@@ -168,3 +253,152 @@ _snippets:
     definitions:
       component_name: Counter
       content_key: content
+  accordion:
+    template: mdx_paired_component
+    inline: false
+    definitions:
+      component_name: Accordion
+      content_key: htmlcontent
+      named_args:
+        - source_key: title
+          editor_key: title
+          type: string
+          optional: false
+    preview:
+      icon: expand
+      subtext:
+        - key: title
+    _inputs:
+      title:
+        type: text
+  player:
+    template: mdx_component
+    inline: false
+    preview:
+      icon: movie
+    definitions:
+      component_name: Player
+      named_args:
+        - source_key: src
+          editor_key: src
+          type: string
+          optional: false
+    _inputs:
+      src:
+        type: url
+  image:
+    template: mdx_component
+    inline: false
+    preview:
+      icon: image
+      subtext:
+        - key: caption
+        - key: title
+        - key: alt
+        - key: src
+      gallery:
+        image:
+          - key: src
+    definitions:
+      component_name: Image
+      named_args:
+        - source_key: src
+          editor_key: src
+          type: string
+          optional: false
+        - source_key: alt
+          editor_key: alt
+          type: string
+          optional: false
+        - source_key: title
+          editor_key: title
+          type: string
+          optional: true
+        - source_key: caption
+          editor_key: caption
+          type: string
+          optional: true
+        - source_key: caption
+          editor_key: caption
+          type: string
+          optional: true
+        - source_key: float
+          editor_key: float
+          type: string
+          optional: true
+        - source_key: fit
+          editor_key: fit
+          type: string
+          optional: true
+        - source_key: class
+          editor_key: classes
+          type: string
+          optional: true
+    _inputs:
+      src:
+        type: image
+      alt:
+        type: text
+        comment: Descriptive fallback text for screen readers and search engines.
+      title:
+        type: text
+        comment: Informational text shown on mouse hover.
+      caption:
+        type: text
+        comment: Caption text beneath the image.
+      float:
+        type: choice
+        comment: Position the image
+        options:
+          values:
+            - Float Left
+            - Center
+            - Float Right
+      fit:
+        type: choice
+        comment: Adjust how the image is sized.
+        options:
+          values:
+            - Contain
+            - Cover
+      classes:
+        label: Style
+        type: multiselect
+        options:
+          allow_create: true
+  navigation:
+    template: mdx_component
+    inline: false
+    preview:
+      icon: account_tree
+    definitions:
+      component_name: Navigation
+      named_args:
+        - source_key: filter
+          editor_key: filter
+          type: string
+          optional: true
+        - source_key: maxDepth
+          editor_key: maxDepth
+          type: number
+          optional: true
+        - source_key: parent
+          editor_key: parent
+          type: boolean
+          optional: true
+        - source_key: hide-cousins
+          editor_key: hide-cousins
+          type: boolean
+          optional: true
+    _inputs:
+      filter:
+        type: text
+      maxDepth:
+        type: number
+        options:
+          min: 1
+          step: 1
+      parent:
+        type: checkbox
+      hide_cousins:
+        type: checkbox

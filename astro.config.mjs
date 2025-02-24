@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, envField } from "astro/config";
 import bookshop from "@bookshop/astro-bookshop";
 import favicons from "astro-favicons";
 import preferences from "/data/preferences.json";
@@ -27,5 +27,15 @@ export default defineConfig({
   scopedStyleStrategy: "attribute",
   image: {
     domains: ["dam.cms.io"],
+  },
+  env: {
+    schema: {
+      BUILDMODE: envField.enum({
+        context: "server",
+        access: "public",
+        default: "PRODUCTION",
+        values: ["PRODUCTION", "EDITOR"],
+      }),
+    },
   },
 });
