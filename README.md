@@ -29,7 +29,7 @@ Use default settings for everything else:
 Then add the submodule:
 
 ```sh
-git submodule add https://github.com/millstreamwebsoftware/mws-astro src/mws-astro
+rm -r src/mws-astro; git submodule add https://github.com/millstreamwebsoftware/mws-astro src/mws-astro
 ```
 
 Create a new github repository:

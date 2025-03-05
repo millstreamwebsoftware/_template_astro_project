@@ -122,7 +122,7 @@ _inputs:
       embed: true
       snippet: true
       horizontalrule: true
-      image: true
+      image: false
       table: true
       undo: true
       redo: true
@@ -168,19 +168,59 @@ _inputs:
       image_size_attributes: true
   classes:
     label: Style
-    type: multiselect
+    type: array
     options:
-      allow_create: true
+      empty_type: array
+  classes[*]:
+    type: text
+  indent:
+    label: Indent
+    type: multichoice
+    options:
+      allow_empty: true
       values:
         - no-indent
         - no-indent-top
         - no-indent-bottom
         - no-indent-left
         - no-indent-right
-  section:
-    type: object
+  height:
+    type: range
     options:
-      subtype: mutable
+      step: 1
+      max: 100
+      min: 0
+  align:
+    type: choice
+    options:
+      values:
+        - top
+        - center
+        - bottom
+  background_video:
+    type: url
+    comment: Use a Vimeo video as a background for this section.
+  background_align:
+    type: choice
+    options:
+      values:
+        - top left
+        - top
+        - top right
+        - left
+        - center
+        - right
+        - bottom left
+        - bottom
+        - bottom right
+  background_opacity:
+    type: range
+    options:
+      step: 1
+      max: 100
+      min: 0
+  background_fixed:
+    type: checkbox
 
 _structures:
   section:
