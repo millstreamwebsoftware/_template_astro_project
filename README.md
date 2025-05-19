@@ -39,15 +39,15 @@ gh repo create
 ```
 
 ```sh
-? What would you like to do? Push an existing local repository to GitHub
-? Path to local repository .
-? Repository name
-? Repository owner millstreamwebsoftware
-? Description
-? Visibility Private
+? What would you like to do?: Push an existing local repository to GitHub
+? Path to local repository: .
+? Repository name: *This should be prefilled*
+? Repository owner: millstreamwebsoftware
+? Description: *Okay to leave blank*
+? Visibility: Private
 ✓ Created repository on GitHub
-? Add a remote? Yes
-? What should the new remote be called? origin
+? Add a remote?: Yes
+? What should the new remote be called?: origin
 ✓ Added remote
 ```
 
