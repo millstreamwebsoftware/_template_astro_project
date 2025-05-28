@@ -104,6 +104,7 @@ markdown:
 _inputs:
   content:
     type: markdown
+    label: Content
     options:
       link: true
       blockquote: true
@@ -136,6 +137,7 @@ _inputs:
       image_size_attributes: true
   htmlcontent:
     type: html
+    label: Content
     options:
       link: true
       blockquote: true
@@ -197,6 +199,19 @@ _inputs:
         - top
         - center
         - bottom
+  animation:
+    type: choice
+    options:
+      allow_empty: true
+      values:
+        - fade
+        - blur
+        - slide-up
+        - slide-right
+        - slide-down
+        - slide-left
+        - grow
+        - flare
   background_video:
     type: url
     comment: Use a Vimeo video as a background for this section.
@@ -221,33 +236,15 @@ _inputs:
       min: 0
   background_fixed:
     type: checkbox
-
-_structures:
-  section:
-    values:
-      - label: Section
-        default: true
-        value:
-          height:
-          color:
-          content:
-          background_color:
-          background_image:
-          background_video:
-          background_align:
-          background_opacity:
-          background_fixed:
-          classes:
-        place_groups_below: true
-        groups:
-          - heading: Background
-            inputs:
-              - background_color
-              - background_image
-              - background_video
-              - background_align
-              - background_opacity
-              - background_fixed
+  alt:
+    type: text
+    comment: Alt text should describe the subject of an image as an accessability feature for screen-readers.
+  background_fit:
+    type: choice
+    options:
+      values:
+        - cover
+        - contain
 
 _snippets_imports:
   mdx: true
@@ -257,6 +254,7 @@ _snippets:
     inline: false
     preview:
       icon: thumb_up
+      text: Facebook
     definitions:
       component_name: Facebook
   social:
@@ -264,6 +262,7 @@ _snippets:
     inline: true
     preview:
       icon: share
+      text: Social
     definitions:
       component_name: Social
       named_args:
@@ -290,12 +289,20 @@ _snippets:
   counter:
     template: mdx_paired_component
     inline: true
+    preview:
+      text: Counter
+      icon: plus_one
     definitions:
       component_name: Counter
-      content_key: content
+      content_key: htmlcontent
   accordion:
     template: mdx_paired_component
     inline: false
+    preview:
+      text: Accordion
+      icon: expand_more
+      subtext:
+        - key: title
     definitions:
       component_name: Accordion
       content_key: htmlcontent
@@ -304,10 +311,6 @@ _snippets:
           editor_key: title
           type: string
           optional: false
-    preview:
-      icon: expand
-      subtext:
-        - key: title
     _inputs:
       title:
         type: text
@@ -316,6 +319,7 @@ _snippets:
     inline: false
     preview:
       icon: movie
+      text: Video Player
     definitions:
       component_name: Player
       named_args:
@@ -326,91 +330,12 @@ _snippets:
     _inputs:
       src:
         type: url
-  image:
-    template: mdx_component
-    inline: false
-    preview:
-      icon: image
-      subtext:
-        - key: caption
-        - key: title
-        - key: alt
-        - key: src
-      gallery:
-        image:
-          - key: src
-    definitions:
-      component_name: Image
-      named_args:
-        - source_key: src
-          editor_key: src
-          type: string
-          optional: false
-        - source_key: alt
-          editor_key: alt
-          type: string
-          optional: false
-        - source_key: title
-          editor_key: title
-          type: string
-          optional: true
-        - source_key: caption
-          editor_key: caption
-          type: string
-          optional: true
-        - source_key: caption
-          editor_key: caption
-          type: string
-          optional: true
-        - source_key: float
-          editor_key: float
-          type: string
-          optional: true
-        - source_key: fit
-          editor_key: fit
-          type: string
-          optional: true
-        - source_key: class
-          editor_key: classes
-          type: string
-          optional: true
-    _inputs:
-      src:
-        type: image
-      alt:
-        type: text
-        comment: Descriptive fallback text for screen readers and search engines.
-      title:
-        type: text
-        comment: Informational text shown on mouse hover.
-      caption:
-        type: text
-        comment: Caption text beneath the image.
-      float:
-        type: choice
-        comment: Position the image
-        options:
-          values:
-            - Float Left
-            - Center
-            - Float Right
-      fit:
-        type: choice
-        comment: Adjust how the image is sized.
-        options:
-          values:
-            - Contain
-            - Cover
-      classes:
-        label: Style
-        type: multiselect
-        options:
-          allow_create: true
   navigation:
     template: mdx_component
     inline: false
     preview:
       icon: account_tree
+      text: Navigation
     definitions:
       component_name: Navigation
       named_args:
@@ -442,3 +367,66 @@ _snippets:
         type: checkbox
       hide_cousins:
         type: checkbox
+  img:
+    template: mdx_component
+    inline: false
+    preview:
+      icon: image
+      text: Inline Image
+      image:
+        - key: src
+      subtext:
+        - key: alt
+        - key: title
+      gallery:
+        image:
+          - key: src
+    definitions:
+      component_name: img
+      named_args:
+        - editor_key: src
+          type: string
+          optional: false
+        - editor_key: size
+          source_key: data-size
+          type: string
+          optional: true
+          remove_empty: true
+        - editor_key: align
+          source_key: data-align
+          type: string
+          optional: true
+          remove_empty: true
+        - editor_key: title
+          type: string
+          optional: true
+          remove_empty: true
+        - editor_key: alt
+          type: string
+          optional: true
+          remove_empty: true
+    _inputs:
+      src:
+        type: image
+        label: Image
+      size:
+        type: choice
+        options:
+          allow_empty: true
+          values:
+            - small
+            - medium
+            - large
+      align:
+        type: choice
+        options:
+          allow_empty: true
+          values:
+            - left
+            - center
+            - right
+
+_structures:
+  content_blocks:
+    style: modal
+    values: []

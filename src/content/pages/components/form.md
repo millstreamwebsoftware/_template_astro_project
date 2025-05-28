@@ -1,19 +1,17 @@
 ---
-title: Test Page
+title: Form
+description:
+status: online
+categories: []
+thumbnail:
+order:
 content_blocks:
-  - _bookshop_name: calendar
-    calendarEvents:
-      - googleCalendarId: bayswaterses.com.au_n2q62d90t7m25m9n3d843pj0f4@group.calendar.google.com
-        name: Local Events
-      - googleCalendarId: bayswaterses.com.au_2mhqt62lv7rvdp675dnn6tjdr4@group.calendar.google.com
-        name: Local Training
-      - googleCalendarId: bayswaterses.com.au_sgt04lsr1705sm48jdhrdfgges@group.calendar.google.com
-        name: Regional Events
-      - googleCalendarId: bayswaterses.com.au_mvu8uu7rhhsq9jde5ap6daq3fg@group.calendar.google.com
-        name: Resource Bookings
   - _bookshop_name: form
     name: contact-us
     action: https://usebasin.com/f/88179f198898
+    content: |-
+      # Form
+      This page demonstrates some of the options available with the form builder.
     form_blocks:
       - _bookshop_name: form/info
         content: This is a test of the form info block; Default style
@@ -81,8 +79,6 @@ content_blocks:
           - for
           - dropdown
         required: true
-  - _bookshop_name: astrotest
-    text: Test
 show_global_header: true
 show_global_footer: true
 ---
