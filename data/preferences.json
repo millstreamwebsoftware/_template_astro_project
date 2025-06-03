@@ -31,14 +31,18 @@
   },
   "header": {
     "logo_image": "/images/millstream-white.svg",
-    "pin_header": "contain",
+    "pin_header": true,
     "navigation_menu_depth": 3,
     "show_logo": true,
+    "show_logo_mobile": true,
     "show_navigation": true,
     "show_socials": true,
     "show_home": true,
     "show_caret": false,
-    "center_dropdowns": false
+    "center_dropdowns": false,
+    "secondary_navigation": [
+      { "_bookshop_name": "quicklink", "text": "test", "link": "#" }
+    ]
   },
   "footer": {
     "foreground_color": "#fafafa",
@@ -103,10 +107,7 @@
       }
     },
     "pin_header": {
-      "type": "select",
-      "options": {
-        "values": ["false", "pinned", "contain"]
-      }
+      "type": "checkbox"
     }
   }
 }
