@@ -72,6 +72,8 @@ collections_config:
           allow_create: true
           allow_empty: true
           empty_type: array
+      categories[*]:
+        type: text
       publishDate:
         type: datetime
         instance_value: NOW
