@@ -1,0 +1,23 @@
+diff --git a/node_modules/@bookshop/live/lib/app/live.js b/node_modules/@bookshop/live/lib/app/live.js
+index 30e3095..2978f58 100644
+--- a/node_modules/@bookshop/live/lib/app/live.js
++++ b/node_modules/@bookshop/live/lib/app/live.js
+@@ -161,9 +161,18 @@ export const getLive = (engines) => class BookshopLive {
+         const realNow = Date.now();
+         this.shouldRenderAt = null;
+         this.renderedAt = Date.now();
++
++        const beforeEvent = new CustomEvent("bookshop:before-update", {"cancelable": true});
++        window.dispatchEvent(beforeEvent);
++        if (beforeEvent.defaultPrevented) {
++          this.logFn.log(`Update cancelled by defaultPrevented before-update event`);
++          return false;
++        }
+         this.logFn.log(`Rendering the update`);
+         await this.render();
+         this.logFn.log(`Done rendering in ${Date.now() - realNow}ms (${Date.now() - now}ms throttled)`);
++        const afterEvent = new CustomEvent("bookshop:after-update");
++        window.dispatchEvent(afterEvent);
+         return true;
+     }
+ 
