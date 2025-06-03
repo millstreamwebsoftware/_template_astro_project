@@ -67,13 +67,9 @@ collections_config:
       content_blocks:
         type: array
       categories:
-        type: multiselect
-        options:
-          allow_create: true
-          allow_empty: true
-          empty_type: array
-        values:
-          - ""
+        type: array
+      categories[*]:
+        type: text
       publishDate:
         type: datetime
         instance_value: NOW
