@@ -1,6 +1,11 @@
 ---
 _schema: default
 title: Home
+description:
+status: online
+thumbnail:
+categories: []
+order: 0
 content_blocks:
   - _bookshop_name: image
     image: /images/millstream-paper-planes.png
@@ -24,6 +29,8 @@ content_blocks:
     collapse: true
     layout:
       - 2
+publishDate:
+expiryDate:
 show_global_header: true
 show_global_footer: true
 ---
