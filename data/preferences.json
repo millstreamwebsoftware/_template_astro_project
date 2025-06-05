@@ -38,7 +38,7 @@
     "show_navigation": true,
     "show_socials": true,
     "show_home": true,
-    "show_caret": false,
+    "show_caret": true,
     "center_dropdowns": false,
     "secondary_navigation": [
       { "_bookshop_name": "quicklink", "text": "test", "link": "#" }

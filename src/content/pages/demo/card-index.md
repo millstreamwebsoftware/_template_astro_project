@@ -7,7 +7,7 @@ categories: []
 order:
 content_blocks:
   - _bookshop_name: card-index
-    target: "components"
+    target: "demo"
     include:
       - title
       - link
