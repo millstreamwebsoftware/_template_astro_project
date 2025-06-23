@@ -38,7 +38,7 @@
     "show_navigation": true,
     "show_socials": true,
     "show_home": true,
-    "show_caret": true,
+    "show_arrow": false,
     "center_dropdowns": false,
     "navigation": [
       { "_bookshop_name": "navigation/collection", "collection": "pages" }
