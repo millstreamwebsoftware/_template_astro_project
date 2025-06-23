@@ -8,19 +8,18 @@
     "favicon": "public/favicon.svg",
     "social": [
       {
-        "name": "facebook",
-        "title": "Facebook",
-        "link": ""
+        "link": "tel:1300 130 735",
+        "text": "1300 130 735"
       },
       {
-        "name": "twitter",
-        "title": "Twitter",
-        "link": ""
+        "link": "https://www.instagram.com/millstreamcreative"
       },
       {
-        "name": "email",
-        "title": "Email",
-        "link": ""
+        "link": "https://twitter.com/millstreamcms"
+      },
+      {
+        "link": "https://www.millstream.com.au/contact",
+        "icon": "fa6-solid:square-envelope"
       }
     ]
   },
@@ -30,6 +29,7 @@
     "maximum_page_width": 1920
   },
   "header": {
+    "theme": "single",
     "logo_image": "/images/millstream-white.svg",
     "pin_header": true,
     "navigation_menu_depth": 3,
@@ -40,8 +40,57 @@
     "show_home": true,
     "show_caret": true,
     "center_dropdowns": false,
+    "navigation": [
+      { "_bookshop_name": "navigation/collection", "collection": "pages" }
+    ],
     "secondary_navigation": [
-      { "_bookshop_name": "quicklink", "text": "test", "link": "#" }
+      { "_bookshop_name": "navigation/link", "title": "test", "link": "#" },
+      {
+        "_bookshop_name": "navigation/dropdown",
+        "title": "Dropdown",
+        "items": [
+          {
+            "_bookshop_name": "navigation/link",
+            "title": "Test2",
+            "link": "#"
+          },
+          {
+            "_bookshop_name": "navigation/link",
+            "title": "Test2",
+            "link": "#"
+          },
+          {
+            "_bookshop_name": "navigation/dropdown",
+            "title": "Dropdown",
+            "items": [
+              {
+                "_bookshop_name": "navigation/link",
+                "title": "Test2",
+                "link": "#"
+              },
+              {
+                "_bookshop_name": "navigation/link",
+                "title": "Test2",
+                "link": "#"
+              }
+            ]
+          },
+          {
+            "_bookshop_name": "navigation/dropdown",
+            "title": "Pages Collection",
+            "items": [
+              {
+                "_bookshop_name": "navigation/collection",
+                "collection": "pages",
+                "depth": 2
+              }
+            ]
+          },
+          { "_bookshop_name": "navigation/search" }
+        ]
+      },
+      { "_bookshop_name": "navigation/search", "hide": "collapse" },
+      { "_bookshop_name": "navigation/social" }
     ]
   },
   "footer": {
