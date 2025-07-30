@@ -1,6 +1,9 @@
 ---
 title: Subfolder Test
-status: meta
+status: online
 order: 200
-content_blocks: []
+content_blocks:
+  - _bookshop_name: richtext
+    content: |-
+      # Test Item
 ---

@@ -7,7 +7,8 @@ categories: []
 order:
 content_blocks:
   - _bookshop_name: navigation
-    target: ""
+    path: "/"
+    maxDepth: 3
     content: |-
       # Example of the navigation component
 publishDate:

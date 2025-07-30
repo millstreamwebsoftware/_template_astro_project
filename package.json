@@ -14,40 +14,40 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@bookshop/astro-bookshop": "3.16.1",
-    "@bookshop/astro-engine": "3.16.1",
-    "@bookshop/browser": "3.16.1",
-    "@bookshop/generate": "3.16.1",
+    "@bookshop/astro-bookshop": "3.16.3",
+    "@bookshop/astro-engine": "3.16.3",
+    "@bookshop/browser": "3.16.3",
+    "@bookshop/generate": "3.16.3",
     "@cloudcannon/reader": "^1.1.6",
-    "@floating-ui/dom": "^1.7.1",
-    "@fullcalendar/core": "^6.1.17",
-    "@fullcalendar/daygrid": "^6.1.17",
-    "@fullcalendar/google-calendar": "^6.1.17",
-    "@fullcalendar/list": "^6.1.17",
+    "@floating-ui/dom": "^1.7.2",
+    "@fullcalendar/core": "^6.1.18",
+    "@fullcalendar/daygrid": "^6.1.18",
+    "@fullcalendar/google-calendar": "^6.1.18",
+    "@fullcalendar/list": "^6.1.18",
     "@glidejs/glide": "^3.7.1",
-    "@iconify-json/carbon": "^1.2.9",
-    "@iconify-json/fa6-brands": "^1.2.5",
-    "@iconify-json/fa6-solid": "^1.2.3",
+    "@iconify-json/carbon": "^1.2.11",
+    "@iconify-json/fa6-brands": "^1.2.6",
+    "@iconify-json/fa6-solid": "^1.2.4",
     "@iconify-json/svg-spinners": "^1.2.2",
     "@iconify/utils": "^2.3.0",
-    "astro": "5.9.2",
+    "astro": "5.12.3",
     "astro-favicons": "^3.1.5",
     "astro-remote": "^0.3.4",
     "autoprefixer": "^10.4.21",
     "color-string": "^2.0.1",
-    "cssnano": "^7.0.7",
+    "cssnano": "^7.1.0",
     "git-rev-sync": "^3.0.2",
     "he": "^1.2.0",
     "ics": "^3.8.1",
-    "marked": "^15.0.12",
-    "marked-gfm-heading-id": "^4.1.1",
+    "marked": "^16.1.1",
+    "marked-gfm-heading-id": "^4.1.2",
     "mupdf": "^1.26.2",
     "patch-package": "^8.0.0",
-    "pdfjs-dist": "^5.3.31",
+    "pdfjs-dist": "^5.4.54",
     "punycode": "^2.3.1",
     "sanitize.css": "^13.0.0",
     "sass": "1.89.2",
-    "sharp": "^0.34.2",
+    "sharp": "^0.34.3",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
@@ -57,12 +57,12 @@
     "@types/google.maps": "^3.58.1",
     "@types/he": "^1.2.3",
     "@types/markdown-it": "^14.1.2",
-    "@types/node": "^24.0.0"
+    "@types/node": "^24.1.0"
   },
   "overrides": {
     "astro-remote": {
       "ultrahtml": "1.5.2",
-      "marked": "^15.0.12"
+      "marked": "^16.1.1"
     }
   }
 }
