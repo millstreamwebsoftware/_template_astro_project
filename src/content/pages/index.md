@@ -21,10 +21,12 @@ content_blocks:
           - accent
       - _bookshop_name: richtext
         content: >-
-          Remember to update the canonical URL in data/preferences.json.
-
-          To setup client editing, redirect /manager to the cloudcannon client
+          Remember to update the canonical URL in data/preferences.json. To
+          setup client editing, redirect /manager to the cloudcannon client
           editing URL in astro.config.mjs.
+
+
+          Cool it's great to be able to edit in this editor - so much nicer!
     collapse: true
     layout:
       - 2
