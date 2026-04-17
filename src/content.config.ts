@@ -1,7 +1,9 @@
-import { defineCollection, z } from "astro:content";
+import { glob } from "astro/loaders";
+import { defineCollection } from "astro:content";
+import { z } from "astro/zod";
 
 const pagesCollection = defineCollection({
-  type: "content", // v2.5.0 and later
+  loader: glob({ base: "src/content/pages", pattern: ["**/*.md?(x)"] }),
   schema: ({ image }) =>
     z.object({
       _schema: z.any().optional(),

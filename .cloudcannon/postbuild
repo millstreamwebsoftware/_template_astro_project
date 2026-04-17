@@ -1,2 +1,1 @@
-npx @bookshop/generate
 npx -y pagefind --site dist

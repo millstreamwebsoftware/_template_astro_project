@@ -16,6 +16,6 @@ content_blocks:
     indent: no-indent
     showBullets: true
     showArrows: true
-    transition: Slider
+    transition: slider
     animationDuration: 0.4
 ---

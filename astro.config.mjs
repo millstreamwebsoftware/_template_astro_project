@@ -1,12 +1,13 @@
 import { defineConfig, envField } from "astro/config";
-import bookshop from "@bookshop/astro-bookshop";
+import editableRegions from "@cloudcannon/editable-regions/astro-integration";
 import favicons from "astro-favicons";
 import preferences from "/data/preferences.json";
+import mwsIntegration from "@millstreamwebsoftware/mws-astro";
 
 // https://astro.build/config
 export default defineConfig({
   site: preferences.general.canonical_url,
-  integrations: [bookshop(), favicons()],
+  integrations: [mwsIntegration(), editableRegions(), favicons()],
   redirects: {
     "/manager": "/404",
   },
@@ -17,7 +18,7 @@ export default defineConfig({
   env: {
     schema: {
       BUILDMODE: envField.enum({
-        context: "server",
+        context: "client",
         access: "public",
         default: "PRODUCTION",
         values: ["PRODUCTION", "EDITOR"],
